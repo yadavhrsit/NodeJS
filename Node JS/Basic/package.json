@@ -1,0 +1,22 @@
+{
+  "name": "harshit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.8",
+    "debug": "^4.3.4",
+    "express": "^4.18.2",
+    "joi": "^17.7.0",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "underscore": "^1.13.6"
+  },
+  "description": ""
+}
