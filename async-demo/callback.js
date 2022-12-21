@@ -10,3 +10,5 @@ function getUser(id, callback) {
     callback({ id: id, username: "Harshit" });
   }, 2000);
 }
+
+// promises
