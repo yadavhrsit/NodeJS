@@ -1,4 +1,4 @@
-const { error } = require("console");
+const { error, countReset } = require("console");
 const mongoose = require("mongoose");
 
 mongoose
@@ -72,4 +72,27 @@ async function getProducts() {
   .skip((pageNumber-1)*pageSize) 
   .limit(pageSize)*/
 }
-getProducts();
+// getProducts();
+
+async function updateProduct(id) {
+  //const result = await Product.findById(id); //Query First Method
+  const result = await Product.updateOne(
+    { _id: id }, // first parameter a Query
+    {
+      $set: {
+        // second param will be update operator
+        seller: "Vivo",
+        isInStock: false,
+      },
+    }
+  );
+  //const result = await Product.updateMany({isInStock:false});
+  console.log(result);
+}
+//updateProduct("63a2dfa80b5c3a5f94009d9c");
+
+async function deleteProduct(id) {
+  const result = await Product.deleteOne({ _id: id });
+  console.log(result);
+}
+deleteProduct("63a2dfa80b5c3a5f94009d9c");
